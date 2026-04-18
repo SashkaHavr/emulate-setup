@@ -2,6 +2,13 @@
   "name": "emulate-setup",
   "type": "module",
   "private": true,
+  "scripts": {
+    "compose": "docker compose -f docker-compose.yaml up --build -d",
+    "start": "bunx --no-install --bun emulate --service google"
+  },
+  "dependencies": {
+    "emulate": "^0.4.1"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "6.0.2"

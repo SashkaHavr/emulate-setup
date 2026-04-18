@@ -1,0 +1,44 @@
+google:
+  users:
+    - email: user1@example.com
+      name: Test User 1
+    - email: user2@example.com
+      name: Test User 2
+    - email: user3@example.com
+      name: Test User 3
+    - email: user4@example.com
+      name: Test User 4
+    - email: user5@example.com
+      name: Test User 5
+    - email: user6@example.com
+      name: Test User 6
+    - email: user7@example.com
+      name: Test User 7
+    - email: user8@example.com
+      name: Test User 8
+    - email: user9@example.com
+      name: Test User 9
+  oauth_clients:
+    - client_id: my-client-id.apps.googleusercontent.com
+      client_secret: GOCSPX-secret
+      redirect_uris:
+        - http://localhost:3000/auth/oauth2/callback/google-emulate
+        - http://localhost:3001/auth/oauth2/callback/google-emulate
+        - http://localhost:3002/auth/oauth2/callback/google-emulate
+        - http://localhost:3003/auth/oauth2/callback/google-emulate
+        - http://localhost:3004/auth/oauth2/callback/google-emulate
+        - http://localhost:3005/auth/oauth2/callback/google-emulate
+        - http://localhost:3006/auth/oauth2/callback/google-emulate
+        - http://localhost:3007/auth/oauth2/callback/google-emulate
+        - http://localhost:3008/auth/oauth2/callback/google-emulate
+        - http://localhost:3009/auth/oauth2/callback/google-emulate
+        - http://localhost:3010/auth/oauth2/callback/google-emulate
+        - http://localhost:3012/auth/oauth2/callback/google-emulate
+        - http://localhost:3013/auth/oauth2/callback/google-emulate
+        - http://localhost:3014/auth/oauth2/callback/google-emulate
+        - http://localhost:3015/auth/oauth2/callback/google-emulate
+        - http://localhost:3016/auth/oauth2/callback/google-emulate
+        - http://localhost:3017/auth/oauth2/callback/google-emulate
+        - http://localhost:3018/auth/oauth2/callback/google-emulate
+        - http://localhost:3019/auth/oauth2/callback/google-emulate
+        - http://localhost:3020/auth/oauth2/callback/google-emulate
