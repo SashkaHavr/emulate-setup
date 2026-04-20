@@ -1,0 +1,22 @@
+diff --git a/dist/dist-6EW7SSOZ.js b/dist/dist-6EW7SSOZ.js
+index 05bb44705dc1ec6a2d144f2c9822a874d30f7441..8f6f40bbd1f0eb654edc263fc43c6b93490d8757 100644
+--- a/dist/dist-6EW7SSOZ.js
++++ b/dist/dist-6EW7SSOZ.js
+@@ -2839,7 +2839,7 @@ function normalizeUri(uri) {
+ }
+ function matchesRedirectUri(incoming, registered) {
+   const normalized = normalizeUri(incoming);
+-  return registered.some((r) => normalizeUri(r) === normalized);
++  return registered.some((r) => normalized.includes(normalizeUri(r)));
+ }
+ function constantTimeSecretEqual(a, b) {
+   const bufA = Buffer.from(a, "utf-8");
+@@ -3628,7 +3628,7 @@ var googlePlugin = {
+     settingsRoutes(ctx);
+   },
+   seed(store, baseUrl) {
+-    seedDefaults(store, baseUrl);
++    // seedDefaults(store, baseUrl);
+   }
+ };
+ var index_default = googlePlugin;
