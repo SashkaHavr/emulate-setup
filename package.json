@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "compose": "docker compose -f docker-compose.yaml up --build -d",
+    "compose": "(docker network create devcontainer-proxy || true) && docker compose -f docker-compose.yaml up --build -d",
     "start": "bun index.ts"
   },
   "dependencies": {

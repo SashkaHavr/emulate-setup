@@ -2,6 +2,38 @@ services:
   emulate:
     build:
       dockerfile: ./Dockerfile
-    ports:
-      - 4000:4000
     restart: always
+    networks:
+      - devcontainer-proxy
+    environment:
+      EMULATE_URIS: '["emulate.localhost"]'
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.emulate.rule=Host(`emulate.localhost`)
+      - traefik.http.routers.emulate.service=emulate
+      - traefik.http.services.emulate.loadbalancer.server.port=4000
+  traefik:
+    image: traefik:v3
+    restart: always
+    command:
+      - --api.dashboard=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      devcontainer-proxy:
+        aliases:
+          - emulate.localhost
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.traefik.rule=Host(`traefik.localhost`)
+      - traefik.http.routers.traefik.entrypoints=web
+      - traefik.http.routers.traefik.service=api@internal
+
+networks:
+  devcontainer-proxy:
+    external: true
