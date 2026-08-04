@@ -1,8 +1,8 @@
-diff --git a/dist/dist-6EW7SSOZ.js b/dist/dist-6EW7SSOZ.js
-index 05bb44705dc1ec6a2d144f2c9822a874d30f7441..8f6f40bbd1f0eb654edc263fc43c6b93490d8757 100644
---- a/dist/dist-6EW7SSOZ.js
-+++ b/dist/dist-6EW7SSOZ.js
-@@ -2839,7 +2839,7 @@ function normalizeUri(uri) {
+diff --git a/dist/dist-M4RLUUXT.js b/dist/dist-M4RLUUXT.js
+index 9efe00ad2cf6fb8e4bc77eb77edf8660668a87cd..bd4c4cd5184b39070bef86f10e8fa68879248e92 100644
+--- a/dist/dist-M4RLUUXT.js
++++ b/dist/dist-M4RLUUXT.js
+@@ -2960,7 +2960,7 @@ function normalizeUri(uri) {
  }
  function matchesRedirectUri(incoming, registered) {
    const normalized = normalizeUri(incoming);
@@ -11,7 +11,7 @@ index 05bb44705dc1ec6a2d144f2c9822a874d30f7441..8f6f40bbd1f0eb654edc263fc43c6b93
  }
  function constantTimeSecretEqual(a, b) {
    const bufA = Buffer.from(a, "utf-8");
-@@ -3628,7 +3628,7 @@ var googlePlugin = {
+@@ -3803,7 +3803,7 @@ var googlePlugin = {
      settingsRoutes(ctx);
    },
    seed(store, baseUrl) {

@@ -5,8 +5,6 @@ services:
     restart: always
     networks:
       - devcontainer-proxy
-    environment:
-      EMULATE_URIS: '["emulate.localhost"]'
     labels:
       - traefik.enable=true
       - traefik.http.routers.emulate.rule=Host(`emulate.localhost`)
