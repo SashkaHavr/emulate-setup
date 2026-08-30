@@ -19,7 +19,7 @@ index 9efe00ad2cf6fb8e4bc77eb77edf8660668a87cd..bd4c4cd5184b39070bef86f10e8fa688
  }
  function constantTimeSecretEqual(a, b) {
    const bufA = Buffer.from(a, "utf-8");
-@@ -3803,7 +3803,7 @@ var googlePlugin = {
+@@ -3803,7 +3810,7 @@ var googlePlugin = {
      settingsRoutes(ctx);
    },
    seed(store, baseUrl) {
