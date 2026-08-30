@@ -2,12 +2,20 @@ diff --git a/dist/dist-M4RLUUXT.js b/dist/dist-M4RLUUXT.js
 index 9efe00ad2cf6fb8e4bc77eb77edf8660668a87cd..bd4c4cd5184b39070bef86f10e8fa68879248e92 100644
 --- a/dist/dist-M4RLUUXT.js
 +++ b/dist/dist-M4RLUUXT.js
-@@ -2960,7 +2960,7 @@ function normalizeUri(uri) {
+@@ -2960,7 +2960,14 @@ function normalizeUri(uri) {
  }
  function matchesRedirectUri(incoming, registered) {
-   const normalized = normalizeUri(incoming);
+-  const normalized = normalizeUri(incoming);
 -  return registered.some((r) => normalizeUri(r) === normalized);
-+  return registered.some((r) => normalized.includes(normalizeUri(r)));
++  try {
++    const host = new URL(incoming).hostname.toLowerCase();
++    return registered.some((value) => {
++      const domain = value.toLowerCase();
++      return host === domain || host.endsWith(`.${domain}`);
++    });
++  } catch {
++    return false;
++  }
  }
  function constantTimeSecretEqual(a, b) {
    const bufA = Buffer.from(a, "utf-8");
