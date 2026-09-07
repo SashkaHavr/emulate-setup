@@ -4,9 +4,7 @@ services:
       dockerfile: ./Dockerfile
     restart: always
     networks:
-      devcontainer-proxy:
-        aliases:
-          - emulate.localhost
+      - devcontainer-proxy
     labels:
       - traefik.enable=true
       - traefik.http.routers.emulate.rule=Host(`emulate.localhost`)
