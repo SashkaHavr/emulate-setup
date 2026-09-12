@@ -10,7 +10,7 @@
     "build": "bun build --target bun --outdir dist index.ts && bun run cp -r ./node_modules/emulate/dist/fonts ./dist"
   },
   "devDependencies": {
-    "@types/bun": "1.3.14",
+    "@types/bun": "1.4.2",
     "emulate": "^0.9.0",
     "oxfmt": "^0.62.0",
     "typescript": "7.0.2"
