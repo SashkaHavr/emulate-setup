@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "clean": "git clean -xdfq 'node_modules/*' '**/node_modules/*' '**/dist/*'",
-    "compose": "(docker network create devcontainer-proxy || true) && (docker volume create devcontainer-opencode-config || true) && (docker volume create devcontainer-opencode-auth || true) && docker compose -f docker-compose.yaml up --build -d",
+    "compose": "(docker network create devcontainer-proxy || true) && (docker volume create devcontainer-opencode-config || true) && (docker volume create devcontainer-pnpm-store || true) && docker compose -f docker-compose.yaml up --build -d",
     "start": "bun index.ts",
     "format": "oxfmt",
     "build": "bun build --target bun --outdir dist index.ts && bun run cp -r ./node_modules/emulate/dist/fonts ./dist"
